@@ -17,3 +17,12 @@ docker run --rm -v hello:/data -v $(pwd):/backup debian:jessie tar czvf /backup/
 docker run --rm -v hello:/data debian:jessie tar czvf /backup/hello_backup.tar.gz -C /data .
 ```
 
+# docker image backup
+```
+docker save -o my_image_backup.tar my_image_name
+```
+
+# docker container backup 
+```
+docker export my_container_name > my_container_backup.tar
+```
